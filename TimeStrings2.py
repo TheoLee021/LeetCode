@@ -1,3 +1,4 @@
+# Parsing and Calculating Seconds from Time Strings in Python
 def add_seconds_to_times(timePoints, seconds):
     # timeParts = [timePoint.split(":") for timePoint in timePoints]
     output = []
@@ -16,14 +17,14 @@ def add_seconds_to_times(timePoints, seconds):
         # h = totalSeconds // 3600
         # m = totalSeconds % 3600 // 60
         # s = totalSeconds % 3600 % 60
-        new_h = total // 3600
-        new_m = (total % 3600) // 60
-        new_s = (total % 3600) % 60
+        h = total // 3600
+        m = (total % 3600) // 60
+        s = (total % 3600) % 60
         
         # timePart[0] = str(h)
         # timePart[1] = str(m)
         # timePart[2] = str(s)
         # ":".join(timePart) # need to store some where
-        output.append(f"{new_h:02d}:{new_m:02d}:{new_s:02d}")
+        output.append(f"{h:02d}:{m:02d}:{s:02d}")
         
     return output

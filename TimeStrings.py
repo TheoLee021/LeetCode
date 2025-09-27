@@ -1,3 +1,4 @@
+# Parsing and Calculating Seconds from Time Strings in Python
 def solution(t, s):
     # chunk = t.split(":")
     time_part = [int(part) for part in t.split(":")]
