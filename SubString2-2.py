@@ -8,9 +8,9 @@ def replace_substring(text, old, new):
     while True:
         start_point = text.find(old, i)
         if start_point == -1:
-            output.append(text[i:]) # 남은 꼬리 붙이기
+            output.append(text[i:]) # Adding remaing part
             break
-        output.append(text[i:start_point]) # 매치 전 구간
+        output.append(text[i:start_point]) # part before match
         output.append(new)
         i = start_point + len(old)
     
